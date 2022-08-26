@@ -1,0 +1,43 @@
+show databases;
+
+create database usedlogin;
+
+use userlogin;
+
+show tables;
+
+create table user(id int(11) unsigned auto_increment primary key not null, username varchar(25) 
+not null, password varchar(25) not null, email varchar(40) not null);
+
+show tables;
+
+dercribe user;
+
+------------------------------------------------------------------------------------------
+
+insert into user(username, password, email)
+    -> values('kashif', '21MA60R39','kashifmohammed04@gmail.com');
+
+select * from user;
+-----------------------------------------------------------------------------------------------------
+UPDATE user
+SET Name = 'FANG_Leng'
+WHERE id =2
+
+___________________________________________________________________
+Delete from user where id=6;
+
+DELETE from user_login where username IN('bcooper', 'ndas99');
+____________________________________________________________________
+
+ALTER TABLE user_login DROP column visible;
+
+____________________________________________________________________
+drop database user_login; 
+
+_____________________________________________________________________
+
+select X.year,X.name from movies X, movies Y where Y.year>2005 and Y.name  = X.name and Y.name like '%3-%' limit 10;
+
+
+
